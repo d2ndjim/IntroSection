@@ -9,7 +9,7 @@
 body {
   font-size: 18px;
   font-family: 'Epilogue', sans-serif;
-  font-family: 500;
+  /* font-family: 500; */
   width: 100%;
 }
 
@@ -42,6 +42,7 @@ header h1 {
 }
 
 .paragraph p {
+  margin: 0 auto;
   color: hsl(0, 0%, 41%);
 }
 
