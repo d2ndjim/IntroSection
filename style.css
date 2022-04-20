@@ -65,17 +65,18 @@ header h1 {
   text-decoration: none;
 }
 
-footer {
-  padding: 0 20px;
-}
+/* footer {
+  padding: 10px;
+} */
 
 .footer-images {
   display: flex;
   list-style: none;
   justify-content: center;
-  gap: 15px;
+  gap: 5px;
   align-items: center;
-  padding: 10px;
+  overflow: hidden;
+  /* padding: 10px; */
 }
 
 .desktop-attribute {
