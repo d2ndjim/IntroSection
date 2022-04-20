@@ -9,7 +9,6 @@
 body {
   font-size: 18px;
   font-family: 'Epilogue', sans-serif;
-  /* font-family: 500; */
   width: 100%;
 }
 
@@ -69,11 +68,143 @@ header h1 {
 .footer-images {
   display: flex;
   list-style: none;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 15px;
   align-items: center;
-  /* width: 100%; */
-  /* padding: 10px; */
-  margin: 0 10px;
+  /* margin: 0 10px; */
+}
+
+.desktop-attribute {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .mobile-attribute {
+    display: none;
+    
+  }
+
+  .desktop-attribute {
+    display: block;
+    margin-top: 10px
+  }
+
+  header {
+    font-size: 14px;
+  }
+
+  #nav-bar {
+    margin-right: 350px;
+
+  }
+
+  .nav-items {
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-items li {
+    cursor: pointer;
+  }
+
+  .nav-items > li:hover {
+    color: grey
+  }
+
+  .log-link {
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .log-link li {
+    cursor: pointer;
+  }
+
+  .log-link li:hover {
+    color: grey;
+  }
+
+  #register {
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  #register:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .nav-items a {
+    text-decoration: none;
+    color: hsl(0, 0%, 8%);
+  }
+
+  .nav-items a:hover {
+    color: grey;
+  }
+
+  header ul {
+    list-style: none;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main .left {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45%;
+    height: 100vh;
+    margin: 30px 70px;
+    margin-top: 70px;
+  }
+
+  main .right {
+    display: initial;
+    flex: 1 1 40%;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 60px 5px 0px;
+  }
+
+  .big-img img {
+    align-self: center;
+  }
+
+  .description {
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: center;
+  }
+
+  .desc-heading h1 {
+    font-size: 60px;
+  }
+
+  .button {
+    margin-bottom: 60px;
+  }
+  .button a {
+    margin-left: 10px;
+  }
+
+  footer {
+    margin-left: 20px;
+  }
+
+  .paragraph p {
+    text-align: left;
+    margin-bottom: 35px;
+  }
+
+  .d-flex {
+    display: flex;
+  }
 }
 
 

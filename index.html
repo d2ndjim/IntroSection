@@ -11,15 +11,29 @@
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
 <body>
-  <header>
+  <header class="d-flex">
     <h1>snap</h1>
-    <span><img src="./images/icon-menu.svg" alt="menu-btn"></span>
+    <span class="mobile-attribute"><img src="./images/icon-menu.svg" alt="menu-btn"></span>
+    <nav id="nav-bar" class="desktop-attribute">
+      <ul class="nav-items d-flex">
+        <li>Features</li><span><img src="./images/icon-arrow-down.svg" alt=""></span>
+        <li>Company</li><span><img src="./images/icon-arrow-down.svg" alt=""></span>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+    <div class="login desktop-attribute">
+      <ul class="log-link d-flex">
+        <li>Login</li>
+        <li id="register">Register</li>
+      </ul>
+    </div>
   </header>
   <main>
-    <section class="big-img">
+    <section class="big-img mobile-attribute">
       <img src="./images/image-hero-mobile.png" alt="mobile-img">
     </section>
-    <section class="description">
+    <section class="description left">
       <div class="desc-heading">
         <h1>Make remote work</h1>
       </div>
@@ -30,8 +44,7 @@
       <div class="button">
         <a href="#">Learn more</a>
       </div>
-    </section>
-    <footer>
+      <footer>
       <ul class="footer-images">
         <li><img src="./images/client-databiz.svg" alt=""></li>
         <li><img src="./images/client-audiophile.svg" alt=""></li>
@@ -39,6 +52,11 @@
         <li><img src="./images/client-maker.svg" alt=""></li>
       </ul>
     </footer>
+    </section>
+    <section class="big-img desktop-attribute right">
+      <img src="./images/image-hero-desktop.png" alt="desktop-img">
+    </section>
+    
   </main>
 
   <!-- <div class="attribution">
