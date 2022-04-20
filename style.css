@@ -159,8 +159,7 @@ header h1 {
     flex-direction: column;
     flex: 1 1 45%;
     height: 100vh;
-    margin: 30px 70px;
-    margin-top: 70px;
+    margin: 90px 70px;
   }
 
   main .right {
@@ -204,14 +203,18 @@ header h1 {
   .d-flex {
     display: flex;
   }
+
+  .hide {
+    display: none;
+  }
 }
 
 
-.attribution {
+/* .attribution {
   font-size: 11px;
   text-align: center;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
+} */
