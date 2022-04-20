@@ -10,6 +10,7 @@ body {
   font-size: 18px;
   font-family: 'Epilogue', sans-serif;
   width: 100%;
+  background-color: hsl(0, 0%, 98%);
 }
 
 header {
@@ -64,13 +65,17 @@ header h1 {
   text-decoration: none;
 }
 
+footer {
+  padding: 0 20px;
+}
+
 .footer-images {
   display: flex;
   list-style: none;
   justify-content: center;
   gap: 15px;
   align-items: center;
-  /* margin: 0 10px; */
+  padding: 10px;
 }
 
 .desktop-attribute {
@@ -103,11 +108,16 @@ header h1 {
     justify-content: center;
   }
 
-  .nav-items li {
+  .nav-items button {
     cursor: pointer;
+    text-decoration: none;
+    border: none;
+    background: none;
+    color: hsl(0, 0%, 8%);
+    font-weight: bolder;
   }
 
-  .nav-items > li:hover {
+  .nav-items button:hover {
     color: grey
   }
 
