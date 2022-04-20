@@ -109,17 +109,49 @@ header h1 {
     justify-content: center;
   }
 
-  .nav-items button {
+  .link {
     cursor: pointer;
     text-decoration: none;
     border: none;
     background: none;
     color: hsl(0, 0%, 8%);
     font-weight: bolder;
+    font-size: 0.9rem;
+  }
+  .dropdown.active > .link,
+  .link:hover {
+    color: grey;
   }
 
-  .nav-items button:hover {
-    color: grey
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu > a {
+    color: hsl(0, 0%, 41%)
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 9px;
+    left: 0;
+    top: calc(100% + .25rem);
+    background-color: white;
+    padding: .70rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  }
+
+  .dropdown.active > .link + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   .log-link {
@@ -218,6 +250,15 @@ header h1 {
   .hide {
     display: none;
   }
+
+  .drop-div {
+    align-items: center;
+    gap: 5px;
+    color: hsl(0, 0%, 41%);
+    cursor: pointer;
+  }
+
+  
 }
 
 
