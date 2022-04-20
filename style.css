@@ -62,7 +62,6 @@ header h1 {
   width: 70px;
   padding: 10px;
   text-decoration: none;
-  /* text-align: center; */
 }
 
 .footer-images {
@@ -183,7 +182,7 @@ header h1 {
   }
 
   .desc-heading h1 {
-    font-size: 60px;
+    font-size: 70px;
   }
 
   .button {
@@ -208,19 +207,11 @@ header h1 {
 }
 
 
-
-
-
-
-
-
-
-
-/* .attribution {
+.attribution {
   font-size: 11px;
   text-align: center;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-} */
+}
