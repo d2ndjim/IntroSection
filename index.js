@@ -39,7 +39,17 @@ const displayArrow = () => {
       companyUp.classList.remove("hide");
     } 
   });
-
 }
+
+// mobile menu 
+
+const openMenu = () => {
+  document.querySelector("header").classList.add("visible");
+  document.querySelector(".closeBtn").classList.toggle("visible");
+};
+const closeMenu = () => {
+  document.querySelector("header").classList.remove("visible");
+  document.querySelector(".closeBtn").classList.toggle("visible");
+};
 
 displayArrow();
