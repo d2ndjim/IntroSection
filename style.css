@@ -81,6 +81,15 @@ header h1 {
   /* flex-direction: column; */
 }
 
+.close-menu {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 11;
+  cursor: pointer;
+}
+
 .visible {
   display: inline-block;
 }
@@ -94,6 +103,10 @@ header h1 {
   .desktop-attribute {
     display: block;
     margin-top: 10px
+  }
+
+  .close-menu {
+    display: none;
   }
 
   header {
@@ -149,13 +162,13 @@ header h1 {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-10px);
+    transform: translateX(-10px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
   }
 
   .dropdown.active > .link + .dropdown-menu {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
     pointer-events: auto;
   }
 
