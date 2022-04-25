@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+<body>
+  <header class="d-flex">
+    <div class="mobile-header">
+      <h1>snap</h1>
+      <span class="mobile-attribute hamburger"><img src="./images/icon-menu.svg" alt="menu-btn"></span>
+    </div>
+    <nav class="mobile-nav">
+      <div class="close-menu">
+      <img id="close-menu" src="./images/icon-close-menu.svg" alt="close icon">
+      </div>
+      <div class="nav-items-mobile">
+        <div class="dropdown" data-dropdown>
+          <button id="feature-mobile" class="link" data-dropdown-button>Features
+            <span class="feature-down-mobile"><img src="./images/icon-arrow-down.svg" alt="down-arrow"></span>
+            <span class="feature-up-mobile hide"><img src="./images/icon-arrow-up.svg" alt="up-arrow"></span>
+          </button>
+          <div class="dropdown-menu">
+            <div class="d-flex drop-div-mobile"><span><img src="./images/icon-todo.svg" alt=""></span>Todo List</div>
+            <div class="d-flex drop-div-mobile"><span><img src="./images/icon-calendar.svg" alt=""></span>Calendar</div>
+            <div class="d-flex drop-div-mobile"><span><img src="./images/icon-reminders.svg" alt=""></span>Reminders</div>
+            <div class="d-flex drop-div-mobile"><span><img src="./images/icon-planning.svg" alt=""></span>Planning</div>
+          </div>
+        </div>
+        <div class="dropdown" data-dropdown>
+          <button id="company-mobile" class="link" data-dropdown-button>Company
+            <span class="company-down-mobile"><img src="./images/icon-arrow-down.svg" alt=""></span> 
+            <span class="company-up-mobile hide"><img src="./images/icon-arrow-up.svg" alt="up-arrow"></span>
+          </button>
+          
+          <div class="dropdown-menu">
+            <div><a href="#">History</a></div>
+            <div><a href="#">Our Team</a></div>
+            <div><a href="#">Blog</a></div>
+          </div>
+        </div>
+        
+        <div><a href="#">Careers</a></div>
+        <div><a href="#">About</a></div>
+      </div>
+    </nav>
+
+    <nav id="nav-bar" class="desktop-nav">
+      <div class="nav-items d-flex desktop-attribute">
+        <div class="dropdown" data-dropdown>
+          <button id="feature" class="link" data-dropdown-button>Features
+            <span class="feature-down"><img src="./images/icon-arrow-down.svg" alt="down-arrow"></span>
+            <span class="feature-up hide"><img src="./images/icon-arrow-up.svg" alt="up-arrow"></span>
+          </button>
+          <div class="dropdown-menu d-flex">
+            <div class="d-flex drop-div"><span><img src="./images/icon-todo.svg" alt=""></span>Todo List</div>
+            <div class="d-flex drop-div"><span><img src="./images/icon-calendar.svg" alt=""></span>Calendar</div>
+            <div class="d-flex drop-div"><span><img src="./images/icon-reminders.svg" alt=""></span>Reminders</div>
+            <div class="d-flex drop-div"><span><img src="./images/icon-planning.svg" alt=""></span>Planning</div>
+          </div>
+        </div>
+        <div class="dropdown" data-dropdown>
+          <button id="company" class="link" data-dropdown-button>Company
+            <span class="company-down"><img src="./images/icon-arrow-down.svg" alt=""></span> 
+            <span class="company-up hide"><img src="./images/icon-arrow-up.svg" alt="up-arrow"></span>
+          </button>
+          
+          <div class="dropdown-menu d-flex">
+            <div><a href="#">History</a></div>
+            <div><a href="#">Our Team</a></div>
+            <div><a href="#">Blog</a></div>
+          </div>
+        </div>
+        
+        <div><a href="#">Careers</a></div>
+        <div><a href="#">About</a></div>
+      </div>
+    </nav>
+    <div class="login desktop-attribute">
+      <ul class="log-link d-flex">
+        <li>Login</li>
+        <li id="register">Register</li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <section class="big-img mobile-attribute">
+      <img src="./images/image-hero-mobile.png" alt="mobile-img">
+    </section>
+    <section class="description left">
+      <div class="desc-heading">
+        <h1>Make remote work</h1>
+      </div>
+      <div class="paragraph">
+        <p>Get your team in sync, no matter your location. Streamline processes, 
+            create team rituals, and watch productivity soar.</p>
+      </div>
+      <div class="button">
+        <a href="#">Learn more</a>
+      </div>
+      <footer>
+        <ul class="footer-images">
+          <li><img src="./images/client-databiz.svg" alt=""></li>
+          <li><img src="./images/client-audiophile.svg" alt=""></li>
+          <li><img src="./images/client-meet.svg" alt=""></li>
+          <li><img src="./images/client-maker.svg" alt=""></li>
+        </ul>
+      </footer>
+    </section>
+    <section class="big-img desktop-attribute right">
+      <img src="./images/image-hero-desktop.png" alt="desktop-img">
+    </section>
+    <div id="overlay"></div>
+  </main>
+
+  <!-- <div class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>  
+    Coded by <a href="github.com/d2ndjim">Lekan Jimoh</a>.
+  </div> -->
+  <script src="index.js"></script>
+</body>
+</html>
