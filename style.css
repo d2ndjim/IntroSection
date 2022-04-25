@@ -13,6 +13,15 @@ body {
   background-color: hsl(0, 0%, 98%);
 }
 
+.attribution {
+  font-size: 15px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 .mobile-header {
   display: flex;
   justify-content: space-between;
@@ -102,7 +111,7 @@ header h1 {
 }
 
 .mobile-nav.active {
-  right: 0
+  right: 0;
 }
 
 #overlay {
@@ -112,13 +121,60 @@ header h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
 }
 
 #overlay.active {
   pointer-events: all;
   opacity: 1;
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background: none;
+  color: hsl(0, 0%, 8%);
+  font-weight: bolder;
+  font-size: 0.9rem;
+}
+
+.link:hover {
+  color: grey;
+}
+
+.dropdown.active > .link,
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu > a {
+  color: hsl(0, 0%, 41%);
+}
+
+.dropdown-menu {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 9px;
+  left: 0;
+  top: calc(100% + 0.25rem);
+  background-color: white;
+  padding: 0.7rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown.active > .link + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .nav-items-mobile {
@@ -138,53 +194,6 @@ header h1 {
   color: grey;
 }
 
-.link {
-  cursor: pointer;
-  text-decoration: none;
-  border: none;
-  background: none;
-  color: hsl(0, 0%, 8%);
-  font-weight: bolder;
-  font-size: 0.9rem;
-}
-
-.dropdown.active>.link,
-.link:hover {
-  color: grey;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu>a {
-  color: hsl(0, 0%, 41%)
-}
-
-.dropdown-menu {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  gap: 10px;
-  font-size: 9px;
-  left: 0;
-  top: calc(100% + .25rem);
-  background-color: white;
-  padding: .70rem;
-  border-radius: .25rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-}
-
-.dropdown.active>.link+.dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
 .drop-div-mobile {
   display: flex;
   align-items: center;
@@ -193,7 +202,6 @@ header h1 {
   cursor: pointer;
 }
 
-
 .hide {
   display: none;
 }
@@ -201,15 +209,15 @@ header h1 {
 @media only screen and (min-width: 992px) {
   .mobile-attribute {
     display: none;
-    
   }
 
   .mobile-nav {
     display: none;
   }
+
   .desktop-attribute {
     display: block;
-    margin-top: 10px
+    margin-top: 10px;
   }
 
   header {
@@ -221,7 +229,6 @@ header h1 {
 
   #nav-bar {
     margin-right: 350px;
-
   }
 
   .nav-items {
@@ -239,17 +246,18 @@ header h1 {
     font-weight: bolder;
     font-size: 0.9rem;
   }
-  .dropdown.active > .link,
+
   .link:hover {
     color: grey;
   }
 
+  .dropdown.active > .link,
   .dropdown {
     position: relative;
   }
 
   .dropdown-menu > a {
-    color: hsl(0, 0%, 41%)
+    color: hsl(0, 0%, 41%);
   }
 
   .dropdown-menu {
@@ -258,11 +266,11 @@ header h1 {
     gap: 10px;
     font-size: 9px;
     left: 0;
-    top: calc(100% + .25rem);
+    top: calc(100% + 0.25rem);
     background-color: white;
-    padding: .70rem;
-    border-radius: .25rem;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    padding: 0.7rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
     opacity: 0;
     pointer-events: none;
     transform: translateY(-10px);
@@ -300,15 +308,6 @@ header h1 {
     color: white;
   }
 
-  .nav-items a {
-    text-decoration: none;
-    color: hsl(0, 0%, 8%);
-  }
-
-  .nav-items a:hover {
-    color: grey;
-  }
-
   header ul {
     list-style: none;
   }
@@ -331,7 +330,7 @@ header h1 {
     flex: 1 1 40%;
     align-items: center;
     justify-content: center;
-    margin: 50px 60px 5px 0px;
+    margin: 50px 60px 5px 0;
   }
 
   .big-img img {
@@ -351,8 +350,18 @@ header h1 {
   .button {
     margin-bottom: 60px;
   }
+
   .button a {
     margin-left: 10px;
+  }
+
+  .nav-items a {
+    text-decoration: none;
+    color: hsl(0, 0%, 8%);
+  }
+
+  .nav-items a:hover {
+    color: grey;
   }
 
   footer {
@@ -378,16 +387,4 @@ header h1 {
     color: hsl(0, 0%, 41%);
     cursor: pointer;
   }
-
-  
-}
-
-
-.attribution {
-  font-size: 15px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
 }
