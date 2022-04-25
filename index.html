@@ -16,11 +16,43 @@
       <h1>snap</h1>
       <span class="mobile-attribute hamburger"><img src="./images/icon-menu.svg" alt="menu-btn"></span>
     </div>
-    <nav id="nav-bar">
-      <div class="nav-items d-flex desktop-attribute">
-        <div class="close-menu">
-          <img src="./images/icon-close-menu.svg" alt="close icon">
+    <nav id="nav-bar" class="mobile-nav">
+      <div class="close-menu">
+      <img id="close-menu" src="./images/icon-close-menu.svg" alt="close icon">
+      </div>
+      <div class="nav-items-mobile">
+        <div class="dropdown" data-dropdown>
+          <button id="feature-mobile" class="link" data-dropdown-button>Features
+            <span class="feature-down-mobile"><img src="./images/icon-arrow-down.svg" alt="down-arrow"></span>
+            <span class="feature-up-mobile hide"><img src="./images/icon-arrow-up.svg" alt="up-arrow"></span>
+          </button>
+          <div class="dropdown-menu">
+            <div class="d-flex drop-div-mobile"><span><img src="./images/icon-todo.svg" alt=""></span>Todo List</div>
+            <div class="d-flex drop-div-mobile"><span><img src="./images/icon-calendar.svg" alt=""></span>Calendar</div>
+            <div class="d-flex drop-div-mobile"><span><img src="./images/icon-reminders.svg" alt=""></span>Reminders</div>
+            <div class="d-flex drop-div-mobile"><span><img src="./images/icon-planning.svg" alt=""></span>Planning</div>
+          </div>
         </div>
+        <div class="dropdown" data-dropdown>
+          <button id="company-mobile" class="link" data-dropdown-button>Company
+            <span class="company-down-mobile"><img src="./images/icon-arrow-down.svg" alt=""></span> 
+            <span class="company-up-mobile hide"><img src="./images/icon-arrow-up.svg" alt="up-arrow"></span>
+          </button>
+          
+          <div class="dropdown-menu">
+            <div><a href="#">History</a></div>
+            <div><a href="#">Our Team</a></div>
+            <div><a href="#">Blog</a></div>
+          </div>
+        </div>
+        
+        <div><a href="#">Careers</a></div>
+        <div><a href="#">About</a></div>
+      </div>
+    </nav>
+
+    <nav id="nav-bar" class="desktop-nav">
+      <div class="nav-items d-flex desktop-attribute">
         <div class="dropdown" data-dropdown>
           <button id="feature" class="link" data-dropdown-button>Features
             <span class="feature-down"><img src="./images/icon-arrow-down.svg" alt="down-arrow"></span>
@@ -84,7 +116,7 @@
     <section class="big-img desktop-attribute right">
       <img src="./images/image-hero-desktop.png" alt="desktop-img">
     </section>
-    
+    <div id="overlay"></div>
   </main>
 
   <div class="attribution">
@@ -92,5 +124,6 @@
     Coded by <a href="github.com/d2ndjim">Lekan Jimoh</a>.
   </div>
   <script src="index.js"></script>
+  
 </body>
 </html>

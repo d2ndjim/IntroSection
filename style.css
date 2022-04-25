@@ -78,7 +78,6 @@ header h1 {
 
 .desktop-attribute {
   display: none;
-  /* flex-direction: column; */
 }
 
 .close-menu {
@@ -94,19 +93,128 @@ header h1 {
   display: inline-block;
 }
 
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  min-height: 100vh;
+  display: block;
+  right: 100%;
+  z-index: 98;
+  background-color: white;
+  padding-top: 110px;
+  transition: 0.4s;
+}
+
+.mobile-nav.active {
+  right: 0
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.nav-items-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-items-mobile a {
+  text-decoration: none;
+  color: hsl(0, 0%, 8%);
+}
+
+.nav-items-mobile a:hover {
+  color: grey;
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background: none;
+  color: hsl(0, 0%, 8%);
+  font-weight: bolder;
+  font-size: 0.9rem;
+}
+
+.dropdown.active>.link,
+.link:hover {
+  color: grey;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu>a {
+  color: hsl(0, 0%, 41%)
+}
+
+.dropdown-menu {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 9px;
+  left: 0;
+  top: calc(100% + .25rem);
+  background-color: white;
+  padding: .70rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown.active>.link+.dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.drop-div-mobile {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: hsl(0, 0%, 41%);
+  cursor: pointer;
+}
+
+
+.hide {
+  display: none;
+}
+
 @media only screen and (min-width: 992px) {
   .mobile-attribute {
     display: none;
     
   }
 
+  .mobile-nav {
+    display: none;
+  }
   .desktop-attribute {
     display: block;
     margin-top: 10px
-  }
-
-  .close-menu {
-    display: none;
   }
 
   header {
@@ -162,13 +270,13 @@ header h1 {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
     opacity: 0;
     pointer-events: none;
-    transform: translateX(-10px);
+    transform: translateY(-10px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
   }
 
   .dropdown.active > .link + .dropdown-menu {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
     pointer-events: auto;
   }
 

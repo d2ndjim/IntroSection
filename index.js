@@ -16,12 +16,29 @@ document.addEventListener('click', e => {
 
 const displayArrow = () => {
   const feature = document.getElementById('feature')
+  const featureMobile = document.getElementById("feature-mobile");
   const company = document.getElementById('company')
+  const companyMobile = document.getElementById("company-mobile");
   const featureDown = document.querySelector('.feature-down')
+  const featureDownMobile = document.querySelector(".feature-down-mobile");
   const featureUp = document.querySelector('.feature-up')
+  const featureUpMobile = document.querySelector(".feature-up-mobile");
   const companyDown = document.querySelector(".company-down");
+  const companyDownMobile = document.querySelector(".company-down-mobile");
   const companyUp = document.querySelector(".company-up");
-  feature.addEventListener('click', () => {
+  const companyUpMobile = document.querySelector(".company-up-mobile");
+
+  featureMobile.addEventListener("click", () => {
+    if (featureDownMobile.classList.contains("hide")) {
+      featureDownMobile.classList.remove("hide");
+      featureUpMobile.classList.add("hide");
+    } else {
+      featureDownMobile.classList.add("hide");
+      featureUpMobile.classList.remove("hide");
+    }
+  });
+
+  feature.addEventListener("click", () => {
     if (featureDown.classList.contains("hide")) {
       featureDown.classList.remove("hide");
       featureUp.classList.add("hide");
@@ -30,17 +47,41 @@ const displayArrow = () => {
       featureUp.classList.remove("hide");
     }
   });
+
+  companyMobile.addEventListener("click", () => {
+    if (companyDownMobile.classList.contains("hide")) {
+      companyDownMobile.classList.remove("hide");
+      companyUpMobile.classList.add("hide");
+    } else {
+      companyDownMobile.classList.add("hide");
+      companyUpMobile.classList.remove("hide");
+    }
+  });
+
   company.addEventListener("click", () => {
-    if (companyDown.classList.contains('hide')) {
+    if (companyDown.classList.contains("hide")) {
       companyDown.classList.remove("hide");
       companyUp.classList.add("hide");
     } else {
       companyDown.classList.add("hide");
       companyUp.classList.remove("hide");
-    } 
+    }
   });
 }
 
 // mobile menu 
+
+const menu_btn = document.querySelector('.hamburger')
+const mobile_menu = document.querySelector(".mobile-nav");
+const close_btn = document.getElementById("close-menu");
+const overlay = document.getElementById('overlay')
+menu_btn.addEventListener('click', () => {
+  mobile_menu.classList.toggle('active')
+  overlay.classList.toggle('active')
+})
+close_btn.addEventListener("click", () => {
+  mobile_menu.classList.toggle("active");
+  overlay.classList.toggle("active");
+});
 
 displayArrow();
